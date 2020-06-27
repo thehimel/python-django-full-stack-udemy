@@ -22,6 +22,10 @@ print(matrix[0][2])  # 3
 new_list = [row[0] for row in matrix]  # [1, 4, 7]
 print(new_list)
 
+numbers = [1, 2, 3, 4]
+squares = [num**2 for num in numbers]
+print(squares)  # [1, 4, 9, 16]
+
 
 # Creating a list of size 10 with 0 in every position
 new_list = [0 for _ in range(10)]
