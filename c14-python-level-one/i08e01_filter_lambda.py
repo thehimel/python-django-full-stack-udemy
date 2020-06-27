@@ -24,9 +24,19 @@ print(evens)  # [0, 2, 4, 6, 8]
 
 
 # Let's do the same thing with filter()
-result = list(filter(is_even, numbers))
-print(result)  # [0, 2, 4, 6, 8]
+evens = list(filter(is_even, numbers))
+print(evens)  # [0, 2, 4, 6, 8]
 
 # If you don't use the list, it will return a generator.
-result_without_list = filter(is_even, numbers)
-print(result_without_list)  # <filter object at 0x000001854AB4E508>
+evens_without_list = filter(is_even, numbers)
+print(evens_without_list)  # <filter object at 0x000001854AB4E508>
+
+
+""" lambda """
+# For x in numbers, lambda x such that x is divisible by 2
+evens = list(filter(lambda x: x % 2 == 0, numbers))
+print(evens)  # [0, 2, 4, 6, 8]
+
+
+get_product = lambda x, y: x * y
+print(get_product(5, 6))
