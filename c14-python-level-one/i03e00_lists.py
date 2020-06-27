@@ -37,6 +37,16 @@ the_list = [1, 2, 3, 4, 5]
 the_list.append(10)  # Appends at the end
 print(the_list)  # [1, 2, 3, 4, 5, 10]
 
+letters = ['a', 'b', 'c']
+the_list.append(letters)  # Appends the list
+print(the_list)  # [1, 2, 3, 4, 5, 10, ['a', 'b', 'c']]
+
+the_list = [1, 2, 3, 4, 5]
+the_list.extend(letters)  # Extends the original list
+print(the_list)  # [1, 2, 3, 4, 5, 'a', 'b', 'c']
+
+
+the_list = [1, 2, 3, 4, 5, 10]
 item = the_list.pop()  # Removes and returns the last item
 print(item)  # 10
 print(the_list)  # [1, 2, 3, 4, 5]
