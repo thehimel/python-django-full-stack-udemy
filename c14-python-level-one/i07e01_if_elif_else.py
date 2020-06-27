@@ -5,6 +5,9 @@ b = 20
 if (a == 10):
     print("a is 10")
 
+print("b is 20" if b == 20 else "b is not 20")
+
+
 if (a < b):
     print("a is less than b")
 else:
