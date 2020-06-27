@@ -42,6 +42,12 @@ print(string.upper())
 print(string.lower())
 print(string.capitalize())  # Capitalize the first letter only
 
+string = "Hello World"
+print(string.split())  # ['Hello', 'World'] <- By default splits on space
+
+string = "Dog, Cat, Tiger"
+print(string.split(', '))  # ['Dog', 'Cat', 'Tiger']
+
 print(string[0])  # 'a'
 print(string[-1])  # 'f' - Last character
 
