@@ -34,4 +34,4 @@ print(food_menu['dinner']['main'][2])  # salad
 
 # Adding an item
 food_menu['snacks'] = ['tea', 'biscuits']
-print(food_menu)
+print(food_menu)  # {... 'snacks': ['tea', 'biscuits']}
