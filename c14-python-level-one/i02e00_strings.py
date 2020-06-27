@@ -47,7 +47,9 @@ print(string.split())  # ['Hello', 'World'] <- By default splits on space
 
 string = "Dog, Cat, Tiger"
 print(string.split(', '))  # ['Dog', 'Cat', 'Tiger']
+print(string.split(', ')[0])  # Dog
 
+string = "abcdef"
 print(string[0])  # 'a'
 print(string[-1])  # 'f' - Last character
 
@@ -59,8 +61,8 @@ print(string[:4])  # abcd <- for(i=0; i<4; i++) <- From 0, upto less than 4
 print(string[2: 4])  # cd <- for(i=2; i<4; i++) <- From 2, upto less than 4
 print(string[2: 4+1])  # cde <- for(i=2; i<=4; i++) <- From to upto 4
 
-print(string[:])  # Returns the whole string
-print(string[::])  # Returns the whole string
+print(string[:])  # abcdef <- Returns the whole string
+print(string[::])  # abcdef <- Returns the whole string
 
 print(string[::1])  # Returns string with step size 1 = Whole string
 print(string[::2])  # ace <- Returns characters after every 1 element
