@@ -1,3 +1,9 @@
+# Built-in classes
+print(type([]))
+print(type(()))
+
+
+# User defined class
 class Sample():
     pass
 
