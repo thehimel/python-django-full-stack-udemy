@@ -26,12 +26,22 @@ get_local_var()
 x = 10
 
 
-# Fetching the global
-def get_global_var():
+def see_global():
+    global x
+    x = "Changed to 20"
+    print(x)
+
+
+see_global()
+
+x = 10
+
+
+def get_global():
     print(x)  # 10
 
 
-get_global_var()
+get_global()
 
 # ----------------------------------
 # Global
@@ -46,3 +56,18 @@ def get_enclosing_local():
 
 
 print(x)
+
+
+# Best way to change a global variable
+
+global_var = 'Initial'
+print(global_var)  # Initial
+
+
+def change_global(x):
+    x = 'Changed'
+    return x
+
+
+global_var = change_global(global_var)
+print(global_var)  # Changed
