@@ -23,6 +23,7 @@ method, the paranthesis is a must.
 
 
 class Circle():
+
     # Class object attribute
     pi = 3.14
 
