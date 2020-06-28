@@ -15,6 +15,8 @@ calling them. Methods can also be created to as setter and getter.
 
 area, set_radius, and get_radius are the methods of class Circle.
 
+my_circle, yellow_circle, red_circle are the objects of Circle class.
+
 During a attribute call, no paranthesis is required. While calling a
 method, the paranthesis is a must.
 """
@@ -64,3 +66,8 @@ print(yellow_circle.area())  # 1962.5
 red_circle = Circle(33, "Red")
 print(red_circle.color)  # Red
 print(red_circle.area())  # 3419.46
+
+
+"""Adding attribute after object creation"""
+red_circle.origin = "North"
+print(red_circle.origin)  # North
