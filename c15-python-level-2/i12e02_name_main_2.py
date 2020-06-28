@@ -1,4 +1,4 @@
-import i12e01_name_main_one as one
+import i12e01_name_main_1 as one
 
 one.get_view()
 
@@ -11,7 +11,7 @@ else:
 
 
 """
-python i12e02_name_main_two.py
+python i12e02_name_main_2.py
 
 Output:
 Top level one.
