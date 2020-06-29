@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +7,8 @@
     <title>Django App</title>
 </head>
 <body>
-    <p>Welcome to Home Page!</p>
-    {{ insert_me }}
+    <h1>Welcome to Home Page!</h1>
+    <p1>{{ subject }}</p1>
+    <img src="{% static 'images/forest-trees.jpg' %}" alt="Forest Trees">
 </body>
 </html>
