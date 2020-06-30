@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Records</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <h1>Access Records</h1>
+    <a href="/admin">Admin</a>
+    <a href="/">Home</a>
+    <a href="/first_app">First App</a>
+    <a href="/first_app/access_records">Access Records</a>
+    <br><br>
+
+    <div class="access_records">
+        {% if access_records %}
+            <table>
+                <thread>
+                    <th>Site Name</th>
+                    <th>Date Accessed</th>
+                </thread>
+                {% for acc_record in access_records %}
+                <tr>
+                    <td>{{ acc_record.name }}</td>
+                    <td>{{ acc_record.date }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        {% else %}
+            <p>No Access Records Found.</p>
+
+        {% endif %}
+    </div>
+</body>
+</html>
