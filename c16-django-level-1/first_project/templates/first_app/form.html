@@ -16,21 +16,21 @@
         <a href="/first_app">First App</a>
         <a href="/first_app/access_records">Access Records</a>
         <a href="/first_app/contact">Contact</a>
+        <a href="/first_app/registration">Registration</a>
+        <br><br>
 
-        <!-- At first when this url is called, the function returns contact_form. If contact_form exists, render the form.
+        <!-- At first when this url is called, the function returns form. If form exists, render the form.
         Else, it's a post request, that time the function returns the message. Render the message.
         -->
 
-        {% if contact_form %}
-            <h1>Contact Us!</h1>
+        {% if form %}
             <form method="POST">
                 {% csrf_token %}
-                {{ contact_form.as_p }}
+                {{ form.as_p }}
                 <input type="submit" class="btn btn-primary" value="Submit">
             </form>
 
         {% elif message %}
-            <br><br>
             <p>{{ message }}</p>
 
         {% endif %}

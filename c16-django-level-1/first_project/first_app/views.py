@@ -21,7 +21,14 @@ def access_records(request):
     return render(request, 'first_app/access_records.html', context=access_records_dictionary)
 
 
+# Simple form
 def contact_form_view(request):
+    # Render the form
+    if request.method == 'GET':
+        form = forms.ContactForm()
+        return render(request, 'first_app/form.html', {'form': form})
+
+
     # If POST Request is received
     if request.method == 'POST':
         form = forms.ContactForm(request.POST)
@@ -38,10 +45,28 @@ def contact_form_view(request):
             message = "Sorry! Something is wrong. Try again lager."
 
         # Render the contact page with the message
-        return render(request, 'first_app/contact.html', {'message': message})
+        return render(request, 'first_app/form.html', {'message': message})
 
+
+# Form to illustrate validators in Django
+def registration_form(request):
     # Render the form
-    else:
-        contact_form = forms.ContactForm()
-        return render(request, 'first_app/contact.html', {'contact_form': contact_form})
+    if request.method == 'GET':
+        form = forms.RegistrationForm()
+        return render(request, 'first_app/form.html', {'form': form})
 
+    # If POST Request is received
+    if request.method == 'POST':
+        form = forms.RegistrationForm(request.POST)
+
+        if form.is_valid():
+            print("Form validation successful!")
+            print(f"Name: {form.cleaned_data['name']}")
+            print(f"Email: {form.cleaned_data['email']}")
+
+            # Render the registration page with the message
+            message = "Registration successful!"
+            return render(request, 'first_app/form.html', {'message': message})
+
+        else:
+            return render(request, 'first_app/form.html', {'form': form})
