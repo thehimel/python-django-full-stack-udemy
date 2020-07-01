@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from first_app.models import Topic, Webpage, AccessRecord
+from first_app.models import Topic, Webpage, AccessRecord, UserDetails
 from first_app import forms
 
 def index(request):
@@ -70,3 +70,21 @@ def registration_form(request):
 
         else:
             return render(request, 'first_app/form.html', {'form': form})
+
+
+# Signup a new user
+def user_signup_form(request):
+    if request.method == "GET":
+        form = forms.UserSignupForm()
+        return render(request, 'first_app/form.html', {'form': form})
+
+    elif request.method == "POST":
+        form = forms.UserSignupForm(request.POST)
+
+        if form.is_valid():
+            form.save(commit=True)
+            return index(request)  # Redirect to index after successfull signup
+
+        else:
+            message = "Sorry! Something is wrong. Try again lager."
+            return render(request, 'first_app/form.html', {'message': message})

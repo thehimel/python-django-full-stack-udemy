@@ -30,6 +30,9 @@ class UserDetails(models.Model):
     last_name = models.CharField(max_length=32)
     email = models.EmailField(max_length=64, unique=True)
 
+    def __str__(self):
+        return f'{self.first_name} {self.last_name}'
+
 
 """
 python manage.py migrate
