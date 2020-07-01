@@ -30,7 +30,7 @@ def contact_form_view(request):
 
 
     # If POST Request is received
-    if request.method == 'POST':
+    elif request.method == 'POST':
         form = forms.ContactForm(request.POST)
 
         if form.is_valid():
@@ -56,7 +56,7 @@ def registration_form(request):
         return render(request, 'first_app/form.html', {'form': form})
 
     # If POST Request is received
-    if request.method == 'POST':
+    elif request.method == 'POST':
         form = forms.RegistrationForm(request.POST)
 
         if form.is_valid():
