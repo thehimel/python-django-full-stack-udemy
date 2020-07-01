@@ -1,5 +1,6 @@
 from django import forms
 from django.core import validators
+from first_app.models import UserDetails
 
 
 # Simple form
@@ -46,3 +47,11 @@ class RegistrationForm(forms.Form):
 
         if email != verify_email:
             raise forms.ValidationError("Emails must match.")
+
+
+# Form to illustrate Models Form in Django
+"""Creating a form according to the model."""
+class UserSignupForm(forms.ModelForm):
+    class Meta():
+        model = UserDetails
+        fields = '__all__'
