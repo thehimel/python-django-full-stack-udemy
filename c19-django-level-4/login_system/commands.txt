@@ -1,7 +1,27 @@
 New Terminal > prompt $g
 
 conda activate env_django
-
 django-admin startproject login_system
-
 django-admin startapp login_app
+
+Create templates folder in the root directory
+Create static folder in the root directory
+
+Edit the settings.py in the project directory:
+----------------------------------------------
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+STATIC_DIR = os.path.join(BASE_DIR, "static")
+INSTALLED_APPS = [
+    ...
+    'login_app',
+]
+TEMPLATES = [
+    {
+        ...
+        'DIRS': [TEMPLATE_DIR],
+        ...
+    },
+]
+STATICFILES_DIRS = [STATIC_DIR]
+
+
