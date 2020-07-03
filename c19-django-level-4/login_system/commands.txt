@@ -1,0 +1,7 @@
+New Terminal > prompt $g
+
+conda activate env_django
+
+django-admin startproject login_system
+
+django-admin startapp login_app
