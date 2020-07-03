@@ -3,9 +3,12 @@ New Terminal > prompt $g
 conda activate env_django
 django-admin startproject login_system
 django-admin startapp login_app
+python manage.py runserver
+
 
 Create templates folder in the root directory
 Create static folder in the root directory
+
 
 Edit the settings.py in the project directory:
 ----------------------------------------------
@@ -25,3 +28,20 @@ TEMPLATES = [
 STATICFILES_DIRS = [STATIC_DIR]
 
 
+Migration
+---------
+python manage.py migrate
+python manage.py makemigrations first_app
+python manage.py migrate
+
+python manage.py shell
+from first_app.models import Topic
+t = Topic(topic_name="Social Network")
+t.save()
+print(Topic.objects.all())
+print(t)
+
+
+Create Super User
+-----------------
+python manage.py createsuperuser
