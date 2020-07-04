@@ -20,8 +20,9 @@ def users(request):
 
 
 def register(request):
+    registered = False
+
     if request.method == 'GET':
-        registered = False
         user_form = UserForm()
         user_profile_info_form = UserProfileInfoForm()
 
@@ -46,8 +47,9 @@ def register(request):
             registered = True
 
         # Else data is invalid
-        else:
-            print(user_form.errors(), user_profile_info_form.errors())
+        # else:
+        #     print("User registration failed.")
+        #     print(user_form.errors(), user_profile_info_form.errors())
 
     dictionary = {
         'registered': registered,
@@ -55,4 +57,5 @@ def register(request):
         'user_profile_info_form': user_profile_info_form
     }
 
+    # In this way, if user already exists, it renders the form showing the error.
     return render(request, 'login_app/register.html', context=dictionary)
