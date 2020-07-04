@@ -5,8 +5,14 @@ Make migration after installing new app or doing some major change in the settin
 
 Installed Packages
 ------------------
+Libraries for user authentication:
 pip install bcrypt
 pip install django[argon2]
+
+Library for pictures:
+pip install pillow
+If you get any error like jpeg support disabled:
+pip install pillow --global-option="build_ext" --global-option="--disable-jpeg"
 
 
 New Terminal > prompt $g
