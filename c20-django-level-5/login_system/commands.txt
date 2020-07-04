@@ -5,6 +5,9 @@ Make migration after installing new app or doing some major change in the settin
 
 Installed Packages
 ------------------
+Libary for linting:
+pip install flake8
+
 Libraries for user authentication:
 pip install bcrypt
 pip install django[argon2]

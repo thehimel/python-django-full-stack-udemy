@@ -32,7 +32,7 @@ def register(request):
             profile = user_profile_info_form.save(commit=False)
             profile.user = user  # Getting the user for one to one relationship
 
-            # request.FILES is a dictionary that contains the files sent by the user
+            # request.FILES is a dict that contains the files sent by the user
             if 'profile_pic' in request.FILES:
                 profile.profile_pic = request.FILES['profile_pic']
 
@@ -50,7 +50,7 @@ def register(request):
         'user_profile_info_form': user_profile_info_form
     }
 
-    # In this way, if user already exists, it renders the form showing the error.
+    # By this, if user already exists, it renders the form showing the error.
     return render(request, 'login_app/register.html', context=dictionary)
 
 
@@ -88,4 +88,7 @@ def user_logout(request):
 # An example view that requries login
 @login_required
 def profile(request):
-    return HttpResponse("Login successful!")
+    username = request.user.username
+    email = request.user.email
+    the_response = f"User Profile:<br>Username: {username}<br>Email: {email}"
+    return HttpResponse(the_response)
