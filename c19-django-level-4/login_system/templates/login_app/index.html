@@ -1,14 +1,5 @@
 <!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login System</title>
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-</head>
-<body>
+{% extends 'login_app/base.html' %}
+    {% block body_block %}
     <h1>Welcome to Index!</h1>
-    <a href="{% url 'login_app:pages' %}">Pages</a>
-</body>
-</html>
+    {% endblock %}
