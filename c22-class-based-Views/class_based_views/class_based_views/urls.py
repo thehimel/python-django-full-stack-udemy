@@ -19,7 +19,7 @@ from cbv_app import views
 # from django.urls import path
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls, name='admin'),
+    url(r'^admin/', admin.site.urls),
     url(r'^$', views.SimpleTemplateView.as_view(), name='index'),
     url(r'^cbv_app/', include('cbv_app.urls')),
 ]
