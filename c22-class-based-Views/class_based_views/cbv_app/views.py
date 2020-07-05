@@ -3,6 +3,8 @@ from django.views.generic import View, TemplateView
 from django.http import HttpResponse
 
 
+# Class Based Views
+
 # Simple CLass Based View
 class SimpleView(View):
     def get(self, request):
