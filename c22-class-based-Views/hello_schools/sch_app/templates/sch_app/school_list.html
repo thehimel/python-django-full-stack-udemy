@@ -4,13 +4,13 @@
     <div class="jumbotron">
         <h1>All Schools</h1>
         <ol>
-            {% for school in schools %}
+            {% for school in school_list %}
                 <!--
                     Example url = /sch_app/school_detail/1
                     Here slug_field, pk = 1
                     We must use slug_field = 'pk' for the generic DetailView
                 -->
-                <li><a href="{% url 'sch_app:school_detail' pk=school.id %}">{{ school.name }}</a></li>
+                <h4><li><a href="{% url 'sch_app:school_detail' pk=school.id %}">{{ school.name }}</a></li></h4>
             {% endfor %}
         </ol>
     </div>

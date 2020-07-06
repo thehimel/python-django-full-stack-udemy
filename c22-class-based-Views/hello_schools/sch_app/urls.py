@@ -5,7 +5,7 @@ app_name = 'sch_app'
 
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
-    path('schools/', views.SchoolListView.as_view(), name='schools'),
+    path('school_list/', views.SchoolListView.as_view(), name='school_list'),
 
     # Example url = /sch_app/school_detail/1
     # Here slug_field, pk = 1

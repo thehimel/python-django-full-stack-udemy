@@ -3,16 +3,14 @@
 {% block body_block %}
     <div class="jumbotron">
         <h1>School Detail</h1>
+        <p>Name: {{school.name}}</p>
+        <p>Principal: {{school.principal}}</p>
+        <p>Location: {{school.location}}</p>
+        <p>Students:</p>
         <ol>
-            <p>Name: {{school_detail.name}}</p>
-            <p>Principal: {{school_detail.principal}}</p>
-            <p>Location: {{school_detail.location}}</p>
-            <p>Students:</p>
-            <ol>
-                {% for student in school_detail.students.all %}
-                    <li>Name: {{ student.name }}, Age: {{ student.age }}</li>
-                {% endfor %}
-            </ol>
+            {% for student in school.students.all %}
+                <li>Name: {{ student.name }}, Age: {{ student.age }}</li>
+            {% endfor %}
         </ol>
     </div>
 {% endblock %}
