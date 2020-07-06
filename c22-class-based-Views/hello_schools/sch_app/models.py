@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class School(models.Model):
@@ -8,6 +9,12 @@ class School(models.Model):
 
     def __str__(self):
         return self.name
+
+    # After creating a new school with CreateView,
+    # app goes to sch_app/school_detail/<int:pk>
+    # pk stands for Primary Key, every object has a unique primary key.
+    def get_absolute_url(self):
+        return reverse('sch_app:school_detail', kwargs={'pk': self.pk})
 
 
 class Student(models.Model):

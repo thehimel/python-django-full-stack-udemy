@@ -12,5 +12,7 @@
                 <li>Name: {{ student.name }}, Age: {{ student.age }}</li>
             {% endfor %}
         </ol>
+        <a href="{% url 'sch_app:update' pk=school.pk %}" class="btn btn-warning">Update</a>
+        <a href="{% url 'sch_app:delete' pk=school.pk %}" class="btn btn-danger">Delete</a>
     </div>
 {% endblock %}
