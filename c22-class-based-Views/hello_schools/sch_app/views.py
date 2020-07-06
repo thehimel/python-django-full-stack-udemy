@@ -4,7 +4,7 @@ from django.views.generic import (
     CreateView, UpdateView, DeleteView)
 
 from django.urls import reverse_lazy
-from sch_app.models import School
+from sch_app.models import School, Student
 
 
 # Simple Template View
@@ -85,3 +85,10 @@ class SchoolDeleteView(DeleteView):
 
     # Redirects to '/sch_app/school_list' on success.
     success_url = reverse_lazy('sch_app:school_list')
+
+
+# Student
+class StudentCreateView(CreateView):
+    model = Student
+
+    fields = '__all__'

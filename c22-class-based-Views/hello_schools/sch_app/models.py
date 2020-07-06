@@ -26,3 +26,9 @@ class Student(models.Model):
 
     def __str__(self):
         return self.name
+
+    # After creating a new student with CreateView,
+    # app goes to sch_app/school_detail/<int:pk>
+    # Here pk = self.school.pk
+    def get_absolute_url(self):
+        return reverse('sch_app:school_detail', kwargs={'pk': self.school.pk})

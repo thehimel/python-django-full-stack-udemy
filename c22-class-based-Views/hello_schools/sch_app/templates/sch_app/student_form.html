@@ -1,0 +1,17 @@
+{% extends 'sch_app/sch_app_base.html' %}
+
+{% block body_block %}
+    <div class="jumbotron">
+        {% if not form.instance.pk %}
+            <h1>Add a New Student</h1>
+        {% else %}
+            <h1>Update the Student</h1>
+        {% endif %}
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-primary" value="Submit">
+        </form>
+    </div>
+{% endblock %}
