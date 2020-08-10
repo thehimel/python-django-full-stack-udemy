@@ -4,7 +4,8 @@ from django.urls import reverse
 
 
 class Post(models.Model):
-    author = models.ForeignKey('auth.User')  # Superuser
+    # Superuser
+    author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     text = models.TextField()
     create_date = models.DateTimeField(default=timezone.now())
@@ -25,7 +26,8 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey('blog_app.Post', related_name='comments')
+    post = models.ForeignKey(
+        'blog_app.Post', on_delete=models.CASCADE, related_name='comments')
     author = models.CharField(max_length=40)  # Anyone
     text = models.TextField()
     create_date = models.DateTimeField(default=timezone.now())
