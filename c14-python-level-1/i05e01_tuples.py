@@ -38,3 +38,5 @@ Item(weight=5, value=3)
 Item(weight=5, value=1)
 Item(weight=24, value=12)
 """
+
+print(items[0].weight, items[0].value)  # 10 2
