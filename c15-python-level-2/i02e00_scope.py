@@ -54,7 +54,10 @@ def get_enclosing_local():
     def get_enclosing():
         print(x)  # 20
 
+    get_enclosing()
 
+
+get_enclosing_local()
 print(x)
 
 
