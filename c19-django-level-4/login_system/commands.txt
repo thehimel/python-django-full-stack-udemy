@@ -1,6 +1,8 @@
 New Terminal > prompt $g
 
+conda create --name env_django python=3.8
 conda activate env_django
+deactivate
 django-admin startproject login_system
 django-admin startapp login_app
 python manage.py runserver

@@ -33,7 +33,6 @@ class RegistrationForm(forms.Form):
         widget=forms.HiddenInput,
         validators=[validators.MaxLengthValidator(0)])
 
-
     """
     This function cleans all the data and we put some validator code here,
     so that when it runs, it also checks for these conditions. This is used
@@ -51,6 +50,8 @@ class RegistrationForm(forms.Form):
 
 # Form to illustrate Models Form in Django
 """Creating a form according to the model."""
+
+
 class UserSignupForm(forms.ModelForm):
     class Meta():
         model = UserDetails

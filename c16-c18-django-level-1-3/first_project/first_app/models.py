@@ -1,12 +1,13 @@
 from django.db import models
 
 
-"""Models: Topic Webapge AccessRecord"""
+# Models: Topic Webapge AccessRecord
 class Topic(models.Model):
     topic_name = models.CharField(max_length=256, unique=True)
 
     def __str__(self):
         return self.topic_name
+
 
 class Webpage(models.Model):
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
@@ -16,6 +17,7 @@ class Webpage(models.Model):
     def __str__(self):
         return self.name
 
+
 class AccessRecord(models.Model):
     name = models.ForeignKey(Webpage, on_delete=models.CASCADE)
     date = models.DateField()
@@ -24,7 +26,7 @@ class AccessRecord(models.Model):
         return str(self.date)
 
 
-"""Model: UserDetails"""
+# Model: UserDetails
 class UserDetails(models.Model):
     first_name = models.CharField(max_length=32)
     last_name = models.CharField(max_length=32)
