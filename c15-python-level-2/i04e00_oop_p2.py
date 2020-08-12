@@ -11,7 +11,7 @@ before it to initialize. We call it by Circle.pi because its
 same for all circles.
 
 radius, color are the attributes. Attributes can be set or get just by
-calling them. Methods can also be created to as setter and getter.
+calling them. Methods can also be created as setter and getter.
 
 area, set_radius, and get_radius are the methods of class Circle.
 
@@ -44,9 +44,8 @@ class Circle():
 
 
 my_circle = Circle()
-# Getting the attribute
+# Getting the attributes
 print(my_circle.color)  # White
-
 print(my_circle.radius)  # 10
 
 # Getting the attribute through the method
