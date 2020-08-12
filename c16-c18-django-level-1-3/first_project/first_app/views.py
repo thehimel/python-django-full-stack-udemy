@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from first_app.models import Topic, Webpage, AccessRecord, UserDetails
+# from django.http import HttpResponse
+# from first_app.models import Topic, Webpage, UserDetails
+from first_app.models import AccessRecord
 from first_app import forms
+
 
 def index(request):
     my_dictionary = {
@@ -18,7 +20,10 @@ def access_records(request):
         'access_records': access_records_list
     }
 
-    return render(request, 'first_app/access_records.html', context=access_records_dictionary)
+    return render(
+        request,
+        'first_app/access_records.html',
+        context=access_records_dictionary)
 
 
 # Simple form
@@ -27,7 +32,6 @@ def contact_form_view(request):
     if request.method == 'GET':
         form = forms.ContactForm()
         return render(request, 'first_app/form.html', {'form': form})
-
 
     # If POST Request is received
     elif request.method == 'POST':
