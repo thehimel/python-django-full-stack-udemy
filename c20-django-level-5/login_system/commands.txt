@@ -1,5 +1,8 @@
 Notes
 -----
+prompt $g
+activate env_django
+
 Make migration after installing new app or doing some major change in the settings.py file.
 
 

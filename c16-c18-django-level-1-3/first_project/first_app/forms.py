@@ -56,3 +56,5 @@ class UserSignupForm(forms.ModelForm):
     class Meta():
         model = UserDetails
         fields = '__all__'
+        # fields = ["first_name", "last_name", "email"]
+        # exclude = ["last_name", "email"]
