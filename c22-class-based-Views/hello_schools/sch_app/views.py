@@ -84,6 +84,7 @@ class SchoolDeleteView(DeleteView):
     model = School
 
     # Redirects to '/sch_app/school_list' on success.
+    # reverse_lazy is used to perform the redirection after successful deletion
     success_url = reverse_lazy('sch_app:school_list')
 
 
