@@ -1,12 +1,19 @@
+"""
+pip install faker
+root/populate_first_app.py
+python populate_first_app.py
+"""
+
 import os
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'first_project.settings')
+
 import django
+django.setup()
+
 # Fake Population Script
 import random
 from faker import Faker
-from first_app.models import Topic, Webpage, AccessRecord
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'first_project.settings')
-django.setup()
+from first_app.models import Topic, Webpage, AccessRecord, UserDetails
 
 fakegen = Faker()
 topics = ['Search Engine', 'Social Network', 'Marketplace', 'News', 'Games']
@@ -32,7 +39,7 @@ def add_webpage():
     return the_webpage
 
 
-def populate(n=5):
+def populate_webpage(n=5):
     for entry in range(n):
         webpage = add_webpage()  # Get or create a webpage
         date = fakegen.date()  # Fake date
@@ -40,7 +47,22 @@ def populate(n=5):
             name=webpage, date=date)[0]
 
 
+def populate_userdetails(n=5):
+    for entry in range(n):
+        name = fakegen.name().split()
+        fake_first_name = name[0]
+        fake_last_name = name[1]
+        fake_email = fakegen.email()
+
+        user = UserDetails.objects.get_or_create(
+            first_name=fake_first_name,
+            last_name=fake_last_name,
+            email=fake_email
+        )[0]
+
+
 if __name__ == '__main__':
     print("Populating script started.")
-    populate()
+    populate_webpage()
+    populate_userdetails()
     print("Populating complete.")
