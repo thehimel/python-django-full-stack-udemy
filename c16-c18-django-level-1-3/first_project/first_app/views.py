@@ -1,7 +1,7 @@
 from django.shortcuts import render
 # from django.http import HttpResponse
 # from first_app.models import Topic, Webpage, UserDetails
-from first_app.models import AccessRecord
+from first_app.models import AccessRecord, UserDetails
 from first_app import forms
 
 
@@ -92,3 +92,12 @@ def user_signup_form(request):
         else:
             message = "Sorry! Something is wrong. Try again lager."
             return render(request, 'first_app/form.html', {'message': message})
+
+
+# Show the list of users
+def users(request):
+    user_list = UserDetails.objects.order_by('first_name')
+    dictionary = {
+        'users': user_list
+    }
+    return render(request, 'first_app/users.html', context=dictionary)
