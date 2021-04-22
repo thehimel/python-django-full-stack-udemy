@@ -1,5 +1,5 @@
 """
-Imporant Note:
+Important Note:
 Strings are immutable.
 str = "Hello World"
 str[2] = "Z"  # This is not possible.
