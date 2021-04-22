@@ -38,5 +38,7 @@ evens = list(filter(lambda x: x % 2 == 0, numbers))
 print(evens)  # [0, 2, 4, 6, 8]
 
 
-get_product = lambda x, y: x * y
+def get_product(x, y): return x * y
+
+
 print(get_product(5, 6))
