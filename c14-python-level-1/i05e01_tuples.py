@@ -6,6 +6,7 @@ That's the only difference between tuple and list.
 Order is available. Thus, slicing in tuple works just like list.
 """
 
+import collections
 data = (1, 'a', 2)
 print(data)
 
@@ -18,7 +19,6 @@ print(data[::-1])  # (2, 'a', 1) <- Reversed the tuple with slicing
 
 
 # Named tuple
-import collections
 
 # An item can be represented as a namedtuple
 Item = collections.namedtuple('Item', ['weight', 'value'])
