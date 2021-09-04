@@ -6,9 +6,9 @@ False, 0, None - All are treated as False
 
 a = True
 a = 1
-a = 'Something'
+a = "Something"
 
-if(a):
+if a:
     print(a)
 
 
@@ -17,9 +17,9 @@ b = 0
 
 c = None
 # Doesn't run as None is treated as False
-if(c):
-    print('C1', c)
+if c:
+    print("C1", c)
 
 # Runs as None is treated as False
-if(not c):
-    print('C2', c)
+if not c:
+    print("C2", c)

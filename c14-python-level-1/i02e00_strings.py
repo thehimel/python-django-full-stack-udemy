@@ -29,7 +29,7 @@ Works like: for(i=2; i<=30; i+=2)
 str1 = "Hello World"
 print(str1)
 
-str2 = 'Hello World'
+str2 = "Hello World"
 print(str2)
 
 str3 = "I'm a Doctor"
@@ -46,8 +46,8 @@ string = "Hello World"
 print(string.split())  # ['Hello', 'World'] <- By default splits on space
 
 string = "Dog, Cat, Tiger"
-print(string.split(', '))  # ['Dog', 'Cat', 'Tiger']
-print(string.split(', ')[0])  # Dog
+print(string.split(", "))  # ['Dog', 'Cat', 'Tiger']
+print(string.split(", ")[0])  # Dog
 
 string = "abcdef"
 print(string[0])  # 'a'
@@ -58,8 +58,8 @@ print(string[-1])  # 'f' - Last character
 string = "abcdef"
 print(string[2:])  # cdef <- From index 2 to last
 print(string[:4])  # abcd <- for(i=0; i<4; i++) <- From 0, up to less than 4
-print(string[2: 4])  # cd <- for(i=2; i<4; i++) <- From 2, up to less than 4
-print(string[2: 4+1])  # cde <- for(i=2; i<=4; i++) <- From to up to 4
+print(string[2:4])  # cd <- for(i=2; i<4; i++) <- From 2, up to less than 4
+print(string[2 : 4 + 1])  # cde <- for(i=2; i<=4; i++) <- From to up to 4
 
 print(string[:])  # abcdef <- Returns the whole string
 print(string[::])  # abcdef <- Returns the whole string

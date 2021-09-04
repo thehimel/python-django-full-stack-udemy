@@ -13,7 +13,7 @@ b >= a
 c == d
 a != d
 
-print(1 != '1')  # True
+print(1 != "1")  # True
 
 
 # Logical Operators

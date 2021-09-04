@@ -13,16 +13,16 @@ class SimpleView(View):
 
 # Simple Template View
 class SimpleTemplateView(TemplateView):
-    template_name = 'cbv_app/index.html'
+    template_name = "cbv_app/index.html"
 
 
 # Template View with Context
 class ContextTemplateView(TemplateView):
-    template_name = 'cbv_app/view.html'
+    template_name = "cbv_app/view.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
         # context is a dictionary here
-        context['message'] = 'This is a Template View with Context.'
+        context["message"] = "This is a Template View with Context."
         return context

@@ -63,12 +63,12 @@ print(x)
 
 # Best way to change a global variable
 
-global_var = 'Initial'
+global_var = "Initial"
 print(global_var)  # Initial
 
 
 def change_global(x):
-    x = 'Changed'
+    x = "Changed"
     return x
 
 

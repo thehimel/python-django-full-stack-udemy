@@ -1,7 +1,12 @@
 # from django.shortcuts import render
 from django.views.generic import (
-    TemplateView, ListView, DetailView,
-    CreateView, UpdateView, DeleteView)
+    TemplateView,
+    ListView,
+    DetailView,
+    CreateView,
+    UpdateView,
+    DeleteView,
+)
 
 from django.urls import reverse_lazy
 from sch_app.models import School, Student
@@ -9,7 +14,7 @@ from sch_app.models import School, Student
 
 # Simple Template View
 class IndexView(TemplateView):
-    template_name = 'index.html'
+    template_name = "index.html"
 
 
 """
@@ -71,13 +76,13 @@ class SchoolDetailView(DetailView):
 class SchoolCreateView(CreateView):
     model = School
 
-    fields = ('name', 'principal', 'location')
+    fields = ("name", "principal", "location")
 
 
 class SchoolUpdateView(UpdateView):
     model = School
 
-    fields = ('name', 'principal')
+    fields = ("name", "principal")
 
 
 class SchoolDeleteView(DeleteView):
@@ -85,11 +90,11 @@ class SchoolDeleteView(DeleteView):
 
     # Redirects to '/sch_app/school_list' on success.
     # reverse_lazy is used to perform the redirection after successful deletion
-    success_url = reverse_lazy('sch_app:school_list')
+    success_url = reverse_lazy("sch_app:school_list")
 
 
 # Student
 class StudentCreateView(CreateView):
     model = Student
 
-    fields = '__all__'
+    fields = "__all__"

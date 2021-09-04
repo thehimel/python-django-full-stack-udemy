@@ -12,8 +12,7 @@ Special methods must contain double underscores before and after the name.
 """
 
 
-class Book():
-
+class Book:
     def __init__(self, title, author, pages):
         self.title = title
         self.author = author
@@ -33,6 +32,6 @@ class Book():
 my_book = Book("Python", "Smith", 250)
 print(my_book)  # Title: Python, Author: Smith, Pages: 250
 print(len(my_book))  # 250
-del(my_book)  # Python by Smith is deleted.
+del my_book  # Python by Smith is deleted.
 
 # print(my_book)  # NameError: name 'my_book' is not defined

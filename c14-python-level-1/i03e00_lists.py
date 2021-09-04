@@ -8,7 +8,7 @@ print(the_list[::-1])  # [5, 4, 3, 2, 1] <- Reverse
 the_list[0] = 99
 print(the_list)  # [99, 2, 3, 4, 5] <- Replaced item on the index
 
-the_list = ['a', 'b', 1, 2, 3, 'Hello', ['Dog', 'Cat'], 'Cream']
+the_list = ["a", "b", 1, 2, 3, "Hello", ["Dog", "Cat"], "Cream"]
 print(the_list)  # Different types of data allowed. But same type recommended.
 
 
@@ -23,7 +23,7 @@ new_list = [row[0] for row in matrix]  # [1, 4, 7]
 print(new_list)
 
 numbers = [1, 2, 3, 4]
-squares = [num**2 for num in numbers]
+squares = [num ** 2 for num in numbers]
 print(squares)  # [1, 4, 9, 16]
 
 
@@ -41,7 +41,7 @@ the_list = [1, 2, 3, 4, 5]
 the_list.append(10)  # Appends at the end
 print(the_list)  # [1, 2, 3, 4, 5, 10]
 
-letters = ['a', 'b', 'c']
+letters = ["a", "b", "c"]
 the_list.append(letters)  # Appends the list
 print(the_list)  # [1, 2, 3, 4, 5, 10, ['a', 'b', 'c']]
 

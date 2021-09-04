@@ -19,7 +19,7 @@ from django.conf.urls import include
 from sch_app import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.IndexView.as_view(), name='index'),
-    path('sch_app/', include('sch_app.urls'))
+    path("admin/", admin.site.urls),
+    path("", views.IndexView.as_view(), name="index"),
+    path("sch_app/", include("sch_app.urls")),
 ]

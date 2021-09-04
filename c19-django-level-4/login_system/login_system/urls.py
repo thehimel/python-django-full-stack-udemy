@@ -19,7 +19,7 @@ from django.conf.urls import url, include
 from login_app import views
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
-    url(r'^admin/', admin.site.urls),
-    url(r'^login_app/', include('login_app.urls')),
+    url(r"^$", views.index, name="index"),
+    url(r"^admin/", admin.site.urls),
+    url(r"^login_app/", include("login_app.urls")),
 ]

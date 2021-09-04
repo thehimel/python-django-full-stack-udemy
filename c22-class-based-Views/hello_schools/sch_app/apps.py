@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class SchAppConfig(AppConfig):
-    name = 'sch_app'
+    name = "sch_app"

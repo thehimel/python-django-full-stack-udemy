@@ -15,7 +15,6 @@ so that the given function becomes a wrapped function.
 
 
 def decorator(gift):
-
     def wrap_gift():
         print("Wrapping the gift().")
         gift()

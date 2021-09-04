@@ -18,5 +18,5 @@ def get_view():
     print("The sky is beautiful.")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     get_view()  # The sky is beautiful.

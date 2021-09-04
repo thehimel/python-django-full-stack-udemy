@@ -7,7 +7,8 @@ Order is available. Thus, slicing in tuple works just like list.
 """
 
 import collections
-data = (1, 'a', 2)
+
+data = (1, "a", 2)
 print(data)
 
 print(data[0])  # 1
@@ -21,11 +22,9 @@ print(data[::-1])  # (2, 'a', 1) <- Reversed the tuple with slicing
 # Named tuple
 
 # An item can be represented as a namedtuple
-Item = collections.namedtuple('Item', ['weight', 'value'])
+Item = collections.namedtuple("Item", ["weight", "value"])
 
-items = [
-    Item(10, 2), Item(29, 10), Item(5, 7),
-    Item(5, 3), Item(5, 1), Item(24, 12)]
+items = [Item(10, 2), Item(29, 10), Item(5, 7), Item(5, 3), Item(5, 1), Item(24, 12)]
 
 for item in items:
     print(item)

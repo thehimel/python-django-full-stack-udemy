@@ -4,7 +4,7 @@ def get_view():
 
 print("Top level one.")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print("One is called directly.")
 else:
     print("One is imported.")

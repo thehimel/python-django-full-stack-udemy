@@ -4,7 +4,7 @@ print(type(()))
 
 
 # User defined class
-class Sample():
+class Sample:
     pass
 
 

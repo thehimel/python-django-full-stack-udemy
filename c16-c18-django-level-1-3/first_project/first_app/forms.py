@@ -20,7 +20,7 @@ def check_for_alphabet(value):
 class RegistrationForm(forms.Form):
     name = forms.CharField(max_length=100, validators=[check_for_alphabet])
     email = forms.EmailField(max_length=100)
-    verify_email = forms.EmailField(max_length=100, label='Repeat Email:')
+    verify_email = forms.EmailField(max_length=100, label="Repeat Email:")
     password = forms.CharField(max_length=32, widget=forms.PasswordInput)
 
     """
@@ -31,18 +31,20 @@ class RegistrationForm(forms.Form):
     botcatcher = forms.CharField(
         required=False,
         widget=forms.HiddenInput,
-        validators=[validators.MaxLengthValidator(0)])
+        validators=[validators.MaxLengthValidator(0)],
+    )
 
     """
     This function cleans all the data and we put some validator code here,
     so that when it runs, it also checks for these conditions. This is used
     for bulk validation checks.
     """
+
     def clean(self):
         all_clean_data = super().clean()
 
-        email = all_clean_data['email']
-        verify_email = all_clean_data['verify_email']
+        email = all_clean_data["email"]
+        verify_email = all_clean_data["verify_email"]
 
         if email != verify_email:
             raise forms.ValidationError("Emails must match.")
@@ -53,8 +55,8 @@ class RegistrationForm(forms.Form):
 
 
 class UserSignupForm(forms.ModelForm):
-    class Meta():
+    class Meta:
         model = UserDetails
-        fields = '__all__'
+        fields = "__all__"
         # fields = ["first_name", "last_name", "email"]
         # exclude = ["last_name", "email"]

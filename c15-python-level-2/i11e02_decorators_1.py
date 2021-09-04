@@ -15,7 +15,6 @@ gift() has been wrapped.
 
 
 def decorator(gift):
-
     def wrap_gift():
         print("Wrapping the gift().")
         gift()

@@ -3,7 +3,7 @@ def add(x, y):
 
 
 try:
-    add(5, 'string')
+    add(5, "string")
 
 # If exception
 except TypeError:
@@ -18,7 +18,7 @@ finally:
 
 # ---------------------------------------
 try:
-    add(5, 'string')
+    add(5, "string")
 
 except Exception:
     print("Caught an exception.")

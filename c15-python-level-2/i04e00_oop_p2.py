@@ -22,7 +22,7 @@ method, the paranthesis is a must.
 """
 
 
-class Circle():
+class Circle:
 
     # Class object attribute
     pi = 3.14
@@ -40,7 +40,7 @@ class Circle():
         return self.radius
 
     def area(self):
-        return Circle.pi * self.radius**2
+        return Circle.pi * self.radius ** 2
 
 
 my_circle = Circle()

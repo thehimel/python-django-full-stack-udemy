@@ -28,21 +28,21 @@
 import re
 
 # List of patterns to search for
-patterns = ['term1', 'term2']
+patterns = ["term1", "term2"]
 
 # Text to parse
-text = 'This is a string with term1, but it does not have the other term.'
+text = "This is a string with term1, but it does not have the other term."
 
 for pattern in patterns:
     print('Searching for "%s" in: \n"%s"' % (pattern, text))
 
     # Check for match
-    if re.search(pattern,  text):
+    if re.search(pattern, text):
         print()
-        print('Match was found.')
+        print("Match was found.")
     else:
         print()
-        print('No Match was found.')
+        print("No Match was found.")
 
 
 # Now we've seen that re.search() will take the pattern, scan the text, and then
@@ -51,12 +51,12 @@ for pattern in patterns:
 
 
 # List of patterns to search for
-pattern = 'term1'
+pattern = "term1"
 
 # Text to parse
-text = 'This is a string with term1, but it does not have the other term.'
+text = "This is a string with term1, but it does not have the other term."
 
-match = re.search(pattern,  text)
+match = re.search(pattern, text)
 
 type(match)
 
@@ -80,9 +80,9 @@ match.end()
 # you used the split() method with strings.
 
 # Term to split on
-split_term = '@'
+split_term = "@"
 
-phrase = 'What is the domain name of someone with the email: hello@gmail.com'
+phrase = "What is the domain name of someone with the email: hello@gmail.com"
 
 # Split the phrase
 re.split(split_term, phrase)
@@ -101,7 +101,7 @@ re.split(split_term, phrase)
 # For example:
 
 # Returns a list of all matches
-re.findall('match', 'test phrase match is in middle')
+re.findall("match", "test phrase match is in middle")
 
 ############################
 #   Pattern re Syntax ######
@@ -119,12 +119,12 @@ re.findall('match', 'test phrase match is in middle')
 
 
 def multi_re_find(patterns, phrase):
-    '''
+    """
     Takes in a list of regex patterns
     Prints a list of all matches
-    '''
+    """
     for pattern in patterns:
-        print('Searching the phrase using the re check: %r' %pattern)
+        print("Searching the phrase using the re check: %r" % pattern)
         print(re.findall(pattern, phrase))
         print()
 
@@ -147,15 +147,15 @@ def multi_re_find(patterns, phrase):
 # Now we will see an example of each of these using our multi_re_find function:
 
 
-test_phrase = 'sdsd..sssddd...sdddsddd...dsds...dsssss...sdddd'
+test_phrase = "sdsd..sssddd...sdddsddd...dsds...dsssss...sdddd"
 
 test_patterns = [
-                'sd*',     # s followed by zero or more d's
-                'sd+',          # s followed by one or more d's
-                'sd?',          # s followed by zero or one d's
-                'sd{3}',        # s followed by three d's
-                'sd{2,3}',      # s followed by two to three d's
-                ]
+    "sd*",  # s followed by zero or more d's
+    "sd+",  # s followed by one or more d's
+    "sd?",  # s followed by zero or one d's
+    "sd{3}",  # s followed by three d's
+    "sd{2,3}",  # s followed by two to three d's
+]
 
 multi_re_find(test_patterns, test_phrase)
 
@@ -168,12 +168,9 @@ multi_re_find(test_patterns, test_phrase)
 # set inputs. For example: the input [ab] searches for occurrences of either a or b.
 
 # Let's see some examples:
-test_phrase = 'sdsd..sssddd...sdddsddd...dsds...dsssss...sdddd'
+test_phrase = "sdsd..sssddd...sdddsddd...dsds...dsssss...sdddd"
 
-test_patterns = [
-            '[sd]',    # either s or d
-            's[sd]+'   # s followed by one or more s or d
-            ]
+test_patterns = ["[sd]", "s[sd]+"]  # either s or d  # s followed by one or more s or d
 
 
 multi_re_find(test_patterns, test_phrase)
@@ -193,14 +190,14 @@ multi_re_find(test_patterns, test_phrase)
 
 # Let's see some examples:
 
-test_phrase = 'This is a string! But it has punctuation. How can we remove it?'
+test_phrase = "This is a string! But it has punctuation. How can we remove it?"
 
 
 # Use [^!.? ] to check for matches that are not a !,.,?, or space. Add the +
 # to check that the match appears at least once, this basically translate into
 # finding the words.
 
-re.findall('[^!.? ]+', test_phrase)
+re.findall("[^!.? ]+", test_phrase)
 
 #############################
 #  Character Ranges #########
@@ -216,14 +213,14 @@ re.findall('[^!.? ]+', test_phrase)
 #
 # Let's walk through some examples:
 
-test_phrase = 'This is an example sentence. Lets see if we can find some letters.'
+test_phrase = "This is an example sentence. Lets see if we can find some letters."
 
 test_patterns = [
-                '[a-z]+',      # sequences of lower case letters
-                '[A-Z]+',      # sequences of upper case letters
-                '[a-zA-Z]+',   # sequences of lower or upper case letters
-                '[A-Z][a-z]+'  # one upper case letter followed by lower case letters
-                ]
+    "[a-z]+",  # sequences of lower case letters
+    "[A-Z]+",  # sequences of upper case letters
+    "[a-zA-Z]+",  # sequences of lower or upper case letters
+    "[A-Z][a-z]+",  # one upper case letter followed by lower case letters
+]
 
 multi_re_find(test_patterns, test_phrase)
 
@@ -249,16 +246,16 @@ multi_re_find(test_patterns, test_phrase)
 # syntax will become clear.
 
 
-test_phrase = 'This is a string with some numbers 1233 and a symbol #hashtag'
+test_phrase = "This is a string with some numbers 1233 and a symbol #hashtag"
 
 test_patterns = [
-                r'\d+',  # sequence of digits
-                r'\D+',  # sequence of non-digits
-                r'\s+',  # sequence of whitespace
-                r'\S+',  # sequence of non-whitespace
-                r'\w+',  # alphanumeric characters
-                r'\W+',  # non-alphanumeric
-                ]
+    r"\d+",  # sequence of digits
+    r"\D+",  # sequence of non-digits
+    r"\s+",  # sequence of whitespace
+    r"\S+",  # sequence of non-whitespace
+    r"\w+",  # alphanumeric characters
+    r"\W+",  # non-alphanumeric
+]
 
 multi_re_find(test_patterns, test_phrase)
 

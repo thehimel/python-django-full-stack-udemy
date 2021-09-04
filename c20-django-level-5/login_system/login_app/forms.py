@@ -7,12 +7,12 @@ class UserForm(forms.ModelForm):
     # Editing the passworld filed for form input, else it will be CharField().
     password = forms.CharField(widget=forms.PasswordInput())
 
-    class Meta():
+    class Meta:
         model = User
-        fields = ('username', 'email', 'password')
+        fields = ("username", "email", "password")
 
 
 class UserProfileInfoForm(forms.ModelForm):
-    class Meta():
+    class Meta:
         model = UserProfileInfo
-        fields = ('portfolio_url', 'profile_pic')
+        fields = ("portfolio_url", "profile_pic")

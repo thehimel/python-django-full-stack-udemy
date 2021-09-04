@@ -5,7 +5,7 @@ from django.urls import reverse
 
 class Post(models.Model):
     # Superuser
-    author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    author = models.ForeignKey("auth.User", on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     text = models.TextField()
     create_date = models.DateTimeField(default=timezone.now())
@@ -19,7 +19,7 @@ class Post(models.Model):
         return self.comments.filter(approved=True)
 
     def get_absolute_url(self):
-        return reverse('post_details', kwargs={'pk': self.pk})
+        return reverse("post_details", kwargs={"pk": self.pk})
 
     def __str__(self):
         return self.title
@@ -27,7 +27,8 @@ class Post(models.Model):
 
 class Comment(models.Model):
     post = models.ForeignKey(
-        'blog_app.Post', on_delete=models.CASCADE, related_name='comments')
+        "blog_app.Post", on_delete=models.CASCADE, related_name="comments"
+    )
     author = models.CharField(max_length=40)  # Anyone
     text = models.TextField()
     create_date = models.DateTimeField(default=timezone.now())
@@ -38,7 +39,7 @@ class Comment(models.Model):
         self.save()
 
     def get_absolute_url(self):
-        return reverse('post_list')
+        return reverse("post_list")
 
     def __str__(self):
         return self.text

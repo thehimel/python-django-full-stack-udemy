@@ -33,15 +33,15 @@ print(result)  # 110
 print(type(result))  # <class 'int'>
 
 if type(result) == int:
-    print('Result is integer')
+    print("Result is integer")
 
 
 def divide(x, y):
     if type(x) == type(y) == type(10):
-        return x/y
+        return x / y
     else:
-        return 'All parameters must be integers.'
+        return "All parameters must be integers."
 
 
 print(divide(50, 5))  # 10.0
-print(divide('50', 5))  # 'All parameters must be integers.'
+print(divide("50", 5))  # 'All parameters must be integers.'

@@ -8,7 +8,7 @@ Method overriding is also allowed.
 """
 
 
-class Animal():
+class Animal:
     def __init__(self):
         print("Animal created.")
 

@@ -15,11 +15,11 @@ product = n * m
 print(product)
 
 # division
-quotient = 10/3
+quotient = 10 / 3
 print(quotient)  # 3.3333333333333335
 
 # integer division
-int_quotient = 10//3
+int_quotient = 10 // 3
 print(int_quotient)  # 3
 
 # power
@@ -31,5 +31,5 @@ root = 25 ** 0.5
 print(root)  # 5
 
 # square root
-root = 25 ** (1/2)
+root = 25 ** (1 / 2)
 print(root)  # 5
