@@ -55,7 +55,7 @@ item = the_list.pop()  # Removes and returns the last item
 print(item)  # 10
 print(the_list)  # [1, 2, 3, 4, 5]
 
-item = the_list.pop(0)  # Remvoes and returns the item from the given index
+item = the_list.pop(0)  # Removes and returns the item from the given index
 print(item)  # 1
 print(the_list)  # [2, 3, 4, 5]
 

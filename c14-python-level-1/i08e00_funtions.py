@@ -8,8 +8,7 @@ in a large project.
 
 
 def get_product(x, y):
-    result = x * y
-    print(result)
+    print(x * y)
 
 
 get_product(2, 3)  # 6
@@ -19,9 +18,7 @@ def get_sum(x=10, y=20):
     """
     Returns the sum of 2 numbers
     """
-    result = x + y
-
-    return result
+    return x + y
 
 
 result = get_sum()

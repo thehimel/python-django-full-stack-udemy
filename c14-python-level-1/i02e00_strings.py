@@ -59,7 +59,7 @@ string = "abcdef"
 print(string[2:])  # cdef <- From index 2 to last
 print(string[:4])  # abcd <- for(i=0; i<4; i++) <- From 0, up to less than 4
 print(string[2:4])  # cd <- for(i=2; i<4; i++) <- From 2, up to less than 4
-print(string[2 : 4 + 1])  # cde <- for(i=2; i<=4; i++) <- From to up to 4
+print(string[2: 4 + 1])  # cde <- for(i=2; i<=4; i++) <- From to up to 4
 
 print(string[:])  # abcdef <- Returns the whole string
 print(string[::])  # abcdef <- Returns the whole string

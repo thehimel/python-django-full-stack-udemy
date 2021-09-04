@@ -5,6 +5,10 @@ for num in numbers:
     print(num, end=" ")
 print()
 
+for index, num in enumerate(numbers):
+    print(f"index={index}, element={num} | ", end="")
+print()
+
 
 users = {"admin": "Smith", "moderator": "Nick", "editor": "Angela"}
 

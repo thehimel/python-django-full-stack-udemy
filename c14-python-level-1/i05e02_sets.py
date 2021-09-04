@@ -14,4 +14,4 @@ print(items)  # {1, 2, 3}
 
 the_list = [10, 10, 10, 50, 50, 50, 60, 60, 60]
 items = set(the_list)
-print(items)
+print(items)  # {10, 50, 60}

@@ -36,3 +36,6 @@ print(food_menu)  # {... 'snacks': ['tea', 'biscuits']}
 # Check the existence of an item
 if "breakfast" in food_menu.keys():
     print("breakfast is available in the food menu.")
+
+if "lunch" in food_menu:
+    print("lunch is available in the food menu.")
