@@ -26,6 +26,7 @@ my_animal.eat()  # Your anumal is eating.
 # Deriving Dog class from base class Animal.
 class Dog(Animal):
     def __init__(self):
+        super().__init__()
         print("Dog created.")
 
     def bark(self):

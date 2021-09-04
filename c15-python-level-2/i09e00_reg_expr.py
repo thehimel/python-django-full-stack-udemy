@@ -270,4 +270,3 @@ multi_re_find(test_patterns, test_phrase)
 #
 # You can also check out the nice summary tables at this source :
 # (http://www.tutorialspoint.com/python/python_reg_expressions.htm).
-#
