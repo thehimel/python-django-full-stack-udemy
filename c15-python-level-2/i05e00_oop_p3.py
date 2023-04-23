@@ -20,7 +20,7 @@ class Animal:
 
 
 my_animal = Animal()  # Animal created.
-my_animal.eat()  # Your anumal is eating.
+my_animal.eat()  # Your animal is eating.
 
 
 # Deriving Dog class from base class Animal.
