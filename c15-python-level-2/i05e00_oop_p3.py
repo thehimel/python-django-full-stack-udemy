@@ -16,7 +16,7 @@ class Animal:
         print("I am an animal.")
 
     def eat(self):
-        print("Your anumal is eating.")
+        print("Your animal is eating.")
 
 
 my_animal = Animal()  # Animal created.
