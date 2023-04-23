@@ -14,10 +14,10 @@ gift() has been wrapped.
 """
 
 
-def decorator(gift):
+def decorator(anything):
     def wrap_gift():
         print("Wrapping the gift().")
-        gift()
+        anything()
         print("gift() has been wrapped.")
 
     return wrap_gift
