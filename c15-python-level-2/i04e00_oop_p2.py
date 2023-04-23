@@ -7,7 +7,7 @@ If Dog is a class, color is an attribute and run is a method.
 
 In the bellow example Circle is a class.
 pi is the class object attribute. It doesn't require the self keyword
-before it to initialize. We call it by Circle.pi because its
+before it to initialize. We call it by `Circle.pi` because its
 same for all circles.
 
 radius, color are the attributes. Attributes can be set or get just by
@@ -17,7 +17,7 @@ area, set_radius, and get_radius are the methods of class Circle.
 
 my_circle, yellow_circle, red_circle are the objects of Circle class.
 
-During a attribute call, no parenthesis is required. While calling a
+During an attribute call, no parenthesis is required. While calling a
 method, the parenthesis is a must.
 
 We can use a method without the parenthesis if we declare it as a property.
@@ -26,7 +26,7 @@ We can use a method without the parenthesis if we declare it as a property.
 
 class Circle:
 
-    # Class object attribute
+    # Class Object Attribute (COA)
     pi = 3.14
 
     def __init__(self, radius=10, color="White"):

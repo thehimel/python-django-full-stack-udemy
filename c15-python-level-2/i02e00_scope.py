@@ -52,13 +52,13 @@ def get_enclosing_local():
     x = 30
 
     def get_enclosing():
-        print(x)  # 20
+        print(x)
 
     get_enclosing()
 
 
-get_enclosing_local()
-print(x)
+get_enclosing_local()  # 30
+print(x)  # 20
 
 
 # Best way to change a global variable
