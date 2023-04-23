@@ -2,15 +2,15 @@
 if __name__ == '__main__':
     .. code ..
 
-This is used to determine whether the python file is being called by it's
+This is used to determine whether the python file is being called by its
 file name or it's imported.
 
 In other programming languages, the main() must be called explicitly.
-But in Python, whatever is written in the file, act like the main function
+But in Python, whatever is written in the file, act like the main function,
 and it's called automatically.
 
 Although if __name__ == '__main__' can be used as calling the main function for
-clearification.
+clarification.
 """
 
 
