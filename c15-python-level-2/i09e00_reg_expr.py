@@ -34,15 +34,10 @@ patterns = ["term1", "term2"]
 text = "This is a string with term1, but it does not have the other term."
 
 for pattern in patterns:
-    print('Searching for "%s" in: \n"%s"' % (pattern, text))
+    print('Searching for "%s" in: "%s"' % (pattern, text))
 
     # Check for match
-    if re.search(pattern, text):
-        print()
-        print("Match was found.")
-    else:
-        print()
-        print("No Match was found.")
+    print("Match found" if re.search(pattern, text) else "Match not found.")
 
 
 # Now we've seen that re.search() will take the pattern, scan the text, and then
